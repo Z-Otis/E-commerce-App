@@ -23,7 +23,9 @@ const Search = () => {
         fetchRandomMeal()
     }
     
-    return(
+    return(<>
+        <h4 className='logo'>RK Meals</h4>
+    
         <div className='search-container'>
             <form action="submit">
                 <input type="text" value={text} onChange={handleTextChange} placeholder='type favorite meal' className='form-input'/>
@@ -32,6 +34,7 @@ const Search = () => {
                 <button type='button' className='btn btn-hipster' onClick={handleRandomMeal}>surprise me!</button>
             </form>
         </div>
+        </>
     )
 }
 

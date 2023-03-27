@@ -1,22 +1,17 @@
-import './App.css'
-import Meals from './components/Meals'
-import Search from './components/Search'
-import Favorites from './components/Favorites'
-import Modal from './components/Modal'
-import { useGlobalContext } from './context'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import AppOverviewPage from './components/AppOverviewPage'
+import LoadingPage from './components/LoadingPage'
 
 
-function App() {
- const {showModal, favorites} = useGlobalContext();
-
+export default function App() {
   return (
-    <div>
-       <Search />
-      {favorites.length > 0 && <Favorites />}
-        <Meals />
-      {showModal && <Modal />}
-      </div>
+    <main>
+      <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<LoadingPage />}/>
+        <Route path='/home' element={<AppOverviewPage />}/>
+      </Routes>
+      </BrowserRouter>
+    </main>
   )
 }
-
-export default App

@@ -165,7 +165,39 @@ ul {
 /* End Of Global Styles */
 /* End Of Global Styles */
 
+/* Loading page */
+
+.loading-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.loading-page .img{
+height: 100vh;
+}
+.loading-page .btn {
+position: absolute;
+top: 20%;
+margin: 0 auto;
+background-color: #475569;
+}
+.loading-page h3 {
+  font-family: 'Courier New', Courier, monospace;
+  position: absolute;
+  top: 60px;
+  text-align: center;
+  
+}
+
 /* Search */
+
+.logo {
+  margin-left: 1rem;
+  margin-top: .5rem;
+  margin-bottom: .5rem
+}
 .search-container{
   height:5rem;
   background:var(--white);
@@ -247,10 +279,16 @@ ul {
   .section-center{
     grid-template-columns:1fr 1fr;
   }
+  .logo{
+    margin-left: 2.5rem;
+  }
 }
 @media screen and (min-width:992px){
   .section-center{
     grid-template-columns:1fr 1fr 1fr;
+  }
+  .logo{
+    margin-left: 7rem
   }
 }
 .single-meal{
